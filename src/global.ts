@@ -22,6 +22,7 @@ html, body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background: #F8F9FA;
 }
 
 img, picture, video, canvas, svg {

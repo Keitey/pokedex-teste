@@ -1,10 +1,11 @@
-import NavBar from "./components/NavBar/NavBar"
+
 import GlobalStyle from './global'
+import Home from './pages/Home/Home'
 
 const App = () => {
   return (
     <>
-      <NavBar />
+      <Home />
       <GlobalStyle />
     </>
   )
