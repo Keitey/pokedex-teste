@@ -6,6 +6,11 @@ export const Card = styled.div`
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 3px;
+  transition: .4s;
+
+  &:hover{
+    transform: scale(1.1)
+  }
 
   img {
     border-radius: 3px 3px 0px 0px;

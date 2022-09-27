@@ -27,7 +27,13 @@ const Home = () => {
       <NavBar />
       <C.Container>
         {pokemons.map((pokemon, key) => {
-          return <PokeCard name={pokemon.data.name} key={key} image={pokemon.data.sprites.front_default} />;
+          return (
+            <PokeCard
+              name={pokemon.data.name}
+              key={key}
+              image={pokemon.data.sprites.front_default}
+            />
+          );
         })}
       </C.Container>
     </>

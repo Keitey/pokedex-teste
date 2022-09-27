@@ -1,6 +1,6 @@
 import * as C from "./styles";
 
-const PokeCard:any = ({name, image}: {name: string, image: string}) => {
+const PokeCard: any = ({ name, image }: { name: string; image: string }) => {
   return (
     <C.CardContainer>
       <C.Card>
