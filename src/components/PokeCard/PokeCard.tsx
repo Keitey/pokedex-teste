@@ -1,9 +1,16 @@
+import * as C from "./styles";
 
-
-const PokeCard = () => {
+const PokeCard:any = ({name, image}: {name: string, image: string}) => {
   return (
-    <div>PokeCard</div>
-  )
-}
+    <C.CardContainer>
+      <C.Card>
+        <img src={image} alt="" />
+        <C.CardText>
+          <p>{name}</p>
+        </C.CardText>
+      </C.Card>
+    </C.CardContainer>
+  );
+};
 
-export default PokeCard
+export default PokeCard;
