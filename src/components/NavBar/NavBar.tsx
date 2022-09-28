@@ -1,6 +1,6 @@
 import * as C from "./styles";
 
-const NavBar = () => {
+const NavBar = ({ pokemonsFilter }: any) => {
   return (
     <C.NavContainer>
       <img
@@ -12,7 +12,8 @@ const NavBar = () => {
           type="search"
           name="navpoke"
           id="navepoke"
-          placeholder="Buscar Pokémon"
+          placeholder="Buscar Pokémon..."
+          onChange={(e)=> pokemonsFilter(e.target.value)}
         />
         <button>Buscar</button>
       </form>

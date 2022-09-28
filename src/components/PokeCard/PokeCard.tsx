@@ -1,6 +1,6 @@
 import * as C from "./styles";
 
-interface MainProps{
+interface MainProps {
   name: string;
   image: string;
 }

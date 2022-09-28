@@ -16,15 +16,29 @@ const Home = () => {
       endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
     }
 
-    let response = axios
+    axios
       .all(endpoints.map((endpoint) => axios.get(endpoint)))
       .then((res) => setPokemons(res))
       .catch((err) => console.error(err));
   };
 
+  const pokemonsFilter = (name: any): void => {
+    let filteredPokemons = [];
+    if(name === ''){
+      getPokemons()
+    }
+    for(let i in pokemons) {
+      if(pokemons[i].data.name.includes(name)){
+        filteredPokemons.push(pokemons[i])
+      }
+    }
+
+    setPokemons(filteredPokemons)
+  }
+
   return (
     <>
-      <NavBar />
+      <NavBar pokemonsFilter={pokemonsFilter}/>
       <C.Container>
         {pokemons.map((pokemon, key) => {
           return (
