@@ -1,6 +1,11 @@
 import * as C from "./styles";
 
-const PokeCard: any = ({ name, image }: { name: string; image: string }) => {
+interface MainProps{
+  name: string;
+  image: string;
+}
+
+const PokeCard = ({ name, image }: MainProps) => {
   return (
     <C.CardContainer>
       <C.Card>
