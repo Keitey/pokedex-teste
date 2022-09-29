@@ -15,7 +15,6 @@ const NavBar = ({ pokemonsFilter }: any) => {
           placeholder="Buscar Pokémon..."
           onChange={(e)=> pokemonsFilter(e.target.value)}
         />
-        <button>Buscar</button>
       </form>
     </C.NavContainer>
   );

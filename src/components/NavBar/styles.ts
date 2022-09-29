@@ -23,17 +23,6 @@ export const NavContainer = styled.div`
     }
   }
 
-  button {
-    height: 35px;
-    width: 61px;
-    border: none;
-    border-radius: 3px;
-    margin-left: 0.2rem;
-    background: #feca1b;
-    color: #3761a8;
-    font-weight: bold;
-  }
-
   img {
     width: 150px;
   }

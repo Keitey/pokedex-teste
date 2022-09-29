@@ -37,7 +37,7 @@ const Home = () => {
   }
 
   return (
-    <>
+    <div style={{paddingBottom: '2rem'}}>
       <NavBar pokemonsFilter={pokemonsFilter}/>
       <C.Container>
         {pokemons.map((pokemon, key) => {
@@ -50,7 +50,8 @@ const Home = () => {
           );
         })}
       </C.Container>
-    </>
+      <C.Button>buscar</C.Button>
+    </div>
   );
 };
 
