@@ -22,5 +22,5 @@ export const Button = styled.button`
   color: #3761a8;
   font-weight: bold;
   padding: 1.3rem;
-  width: 130px;
+  width: 150px;
 `;

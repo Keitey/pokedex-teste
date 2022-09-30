@@ -29,20 +29,6 @@ const Home = () => {
   }, []);
 
 
-  const pokemonsFilter = (name: any): void => {
-    let filteredPokemons = [];
-    if (name === "") {
-      getPokemons();
-    }
-    for (let i in pokemons) {
-      if (pokemons[i].data.name.includes(name)) {
-        filteredPokemons.push(pokemons[i]);
-      }
-    }
-
-    setPokemons(filteredPokemons);
-  };
-
   return (
     <div style={{ paddingBottom: "2rem" }}>
       <NavBar />
@@ -57,7 +43,7 @@ const Home = () => {
           );
         })}
         </C.Container>
-      <C.Button onClick={()=> getPokemons()}>buscar</C.Button>
+      <C.Button onClick={()=> getPokemons()}>Buscar mais...</C.Button>
     </div>
   );
 };
