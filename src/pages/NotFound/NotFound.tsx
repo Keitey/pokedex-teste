@@ -6,7 +6,9 @@ const NotFound = () => {
     <C.Error>
       <h1>404</h1>
       <h3>Página não localizada!</h3>
-      <Link to="/">Ir para Home</Link>
+      <Link to="/">
+      <button>Ir para Home</button>
+      </Link>
     </C.Error>
   );
 };

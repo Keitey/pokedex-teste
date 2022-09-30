@@ -19,9 +19,18 @@ export const Error = styled.div`
     }
   }
 
-  a {
-    text-decoration: none;
-    color: #000;
-    font-size: 23px;
+  button {
+    border: none;
+    background: #feca1b;
+    color: #3761a8;
+    border-radius: 30px;
+    padding: .9rem;
+    font-weight: bold;
+    transition: .4s;
+    cursor: pointer;
+
+    &:hover{
+      background: #FFC255;
+    }
   }
 `;

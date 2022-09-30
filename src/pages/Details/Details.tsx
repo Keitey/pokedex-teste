@@ -6,7 +6,7 @@ const Details = () => {
   const [pokemons, setPokemons] = useState({})
 
   useEffect(()=> {
-
+    
   }, [name])
 
   return (
