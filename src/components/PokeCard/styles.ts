@@ -14,6 +14,7 @@ export const Card = styled.div`
 
   img {
     border-radius: 3px 3px 0px 0px;
+    height: 100px;
   }
 `;
 

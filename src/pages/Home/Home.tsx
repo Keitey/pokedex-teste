@@ -14,7 +14,6 @@ const Home = () => {
     setLoadMore(data.next)
 
     function createPokeObj(result: any){
-      let limit = 10
       result?.forEach(async (pokemon: any) => {
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
         const data =  await res.json()
