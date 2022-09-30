@@ -1,56 +1,64 @@
 import { useState, useEffect } from "react";
 import NavBar from "../../components/NavBar/NavBar";
-import axios from "axios";
 import PokeCard from "../../components/PokeCard/PokeCard";
 import * as C from "./styles";
 
 const Home = () => {
   const [pokemons, setPokemons] = useState<any[]>([]);
+  const [loadMore, setLoadMore] = useState(`https://pokeapi.co/api/v2/pokemon?limit=10`)
+
+  const getPokemons = async () => {
+    const res = await fetch(loadMore)
+    const data = await res.json()
+
+    setLoadMore(data.next)
+
+    function createPokeObj(result: any){
+      let limit = 10
+      result?.forEach(async (pokemon: any) => {
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
+        const data =  await res.json()
+
+        setPokemons(currentList => [...currentList, data])
+      })
+    }
+    createPokeObj(data.results)
+  };
+
   useEffect(() => {
     getPokemons();
   }, []);
 
-  const getPokemons = () => {
-    let endpoints = [];
-    for (let i = 1; i < 11; i++) {
-      endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
-    }
-
-    axios
-      .all(endpoints.map((endpoint) => axios.get(endpoint)))
-      .then((res) => setPokemons(res))
-      .catch((err) => console.error(err));
-  };
 
   const pokemonsFilter = (name: any): void => {
     let filteredPokemons = [];
-    if(name === ''){
-      getPokemons()
+    if (name === "") {
+      getPokemons();
     }
-    for(let i in pokemons) {
-      if(pokemons[i].data.name.includes(name)){
-        filteredPokemons.push(pokemons[i])
+    for (let i in pokemons) {
+      if (pokemons[i].data.name.includes(name)) {
+        filteredPokemons.push(pokemons[i]);
       }
     }
 
-    setPokemons(filteredPokemons)
-  }
+    setPokemons(filteredPokemons);
+  };
 
   return (
-    <div style={{paddingBottom: '2rem'}}>
-      <NavBar pokemonsFilter={pokemonsFilter}/>
-      <C.Container>
-        {pokemons.map((pokemon, key) => {
+    <div style={{ paddingBottom: "2rem" }}>
+      <NavBar />
+        <C.Container>
+        {pokemons.map((pokemon, index) => {
           return (
             <PokeCard
-              name={pokemon.data.name}
-              key={key}
-              image={pokemon.data.sprites.front_default}
+              name={pokemon.name}
+              key={index}
+              image={pokemon.sprites.other.dream_world.front_default}
             />
           );
         })}
-      </C.Container>
-      <C.Button>buscar</C.Button>
+        </C.Container>
+      <C.Button onClick={()=> getPokemons()}>buscar</C.Button>
     </div>
   );
 };
