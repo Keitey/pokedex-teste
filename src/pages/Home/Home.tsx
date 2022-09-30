@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import NavBar from "../../components/NavBar/NavBar";
 import PokeCard from "../../components/PokeCard/PokeCard";
 import * as C from "./styles";
 
@@ -14,7 +13,7 @@ const Home = () => {
     setLoadMore(data.next)
 
     function createPokeObj(result: any){
-      result?.forEach(async (pokemon: any) => {
+      result.forEach(async (pokemon: any) => {
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
         const data =  await res.json()
 
@@ -31,13 +30,12 @@ const Home = () => {
 
   return (
     <div style={{ paddingBottom: "2rem" }}>
-      <NavBar />
         <C.Container>
-        {pokemons.map((pokemon, index) => {
+        {pokemons.map((pokemon, key) => {
           return (
             <PokeCard
               name={pokemon.name}
-              key={index}
+              key={key}
               image={pokemon.sprites.other.dream_world.front_default}
             />
           );

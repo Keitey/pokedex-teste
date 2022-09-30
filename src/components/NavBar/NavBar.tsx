@@ -1,12 +1,15 @@
 import * as C from "./styles";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <C.NavContainer>
-      <img
-        src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi.png"
-        alt="pokedex"
-      />
+      <Link to="/">
+        <img
+          src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi.png"
+          alt="pokedex"
+        />
+      </Link>
       <form action="">
         <input
           type="search"
