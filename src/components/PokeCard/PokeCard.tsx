@@ -1,12 +1,12 @@
 import * as C from "./styles";
 import { Link } from 'react-router-dom'
 
-interface MainProps {
+interface Poke {
   name: string;
   image: string;
 }
 
-const PokeCard = ({ name, image}: MainProps) => {
+const PokeCard = ({ name, image}: Poke) => {
   return (
     <C.CardContainer>
       <C.Card>

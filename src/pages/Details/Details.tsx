@@ -2,12 +2,12 @@ import { useState, useEffect} from 'react'
 import { useParams} from 'react-router-dom'
 
 const Details = () => {
-  const { name} = useParams()
+  const { } = useParams()
   const [pokemons, setPokemons] = useState({})
 
   useEffect(()=> {
-    
-  }, [name])
+
+  }, [])
 
   return (
     <div>
