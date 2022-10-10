@@ -19,6 +19,10 @@ export const Card = styled.div`
 `;
 
 export const CardText = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   background: #3761A8;
   border-radius: 0px 0px 3px 3px;
   padding: 0.3rem;

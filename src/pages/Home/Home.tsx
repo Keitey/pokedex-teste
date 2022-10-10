@@ -7,11 +7,11 @@ const Home = () => {
   const [pokemons, setPokemons] = useState<any[]>([]);
   const [actualPokemons, setActualPokemons] = useState<any[]>([]);
   const [load, loadMore] = useState(0);
-  let page = 10;
+  let perPage = 10;
 
   useEffect(() => {
     const showPokemons = async () => {
-      const names = await pokeName(page, load);
+      const names = await pokeName(perPage, load);
       const pokemonsPromises = names.map(async (name: string) => {
         return await getPokemons(name);
       });
@@ -23,7 +23,7 @@ const Home = () => {
   }, [load]);
 
   async function handleMore() {
-    loadMore(load + page);
+    loadMore(load + perPage);
   }
 
   return (

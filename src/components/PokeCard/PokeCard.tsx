@@ -11,10 +11,11 @@ const PokeCard = ({ name, image, id}: Poke) => {
   return (
     <C.CardContainer>
       <C.Card>
-        <Link to={`/details/${name}/${id}`}>
+        <Link to={`/details/${id}`}>
         <img src={image} alt={name} />
         </Link>
         <C.CardText>
+          <h5>#{id}</h5>
           <p>{name}</p>
         </C.CardText>
       </C.Card>
