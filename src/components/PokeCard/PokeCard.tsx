@@ -11,7 +11,7 @@ const PokeCard = ({ name, image, id}: Poke) => {
   return (
     <C.CardContainer>
       <C.Card>
-        <Link to={`/details/${name}?${id}`}>
+        <Link to={`/details/${name}/${id}`}>
         <img src={image} alt={name} />
         </Link>
         <C.CardText>
