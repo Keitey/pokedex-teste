@@ -10,7 +10,7 @@ const Home = () => {
   let page = 10;
 
   useEffect(() => {
-    const fetchData = async () => {
+    const showPokemons = async () => {
       const names = await pokeName(page, load);
       const pokemonsPromises = names.map(async (name: string) => {
         return await getPokemons(name);
@@ -19,7 +19,7 @@ const Home = () => {
       setPokemons([...pokemons, ...pokemonsMore]);
       setActualPokemons([...pokemons, ...pokemonsMore]);
     };
-    fetchData();
+    showPokemons();
   }, [load]);
 
   async function handleMore() {
