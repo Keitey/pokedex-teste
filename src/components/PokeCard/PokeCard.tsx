@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom'
 
 interface Poke {
   name: string;
-  image: string;
+  image: any;
+  id: number;
 }
 
-const PokeCard = ({ name, image}: Poke) => {
+const PokeCard = ({ name, image, id}: Poke) => {
   return (
     <C.CardContainer>
       <C.Card>
-        <Link to={`/details/${name}`}>
+        <Link to={`/details/${name}?${id}`}>
         <img src={image} alt={name} />
         </Link>
         <C.CardText>

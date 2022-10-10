@@ -1,48 +1,46 @@
 import { useState, useEffect } from "react";
 import PokeCard from "../../components/PokeCard/PokeCard";
+import { pokeName, getPokemons } from "../../services/api";
 import * as C from "./styles";
 
 const Home = () => {
   const [pokemons, setPokemons] = useState<any[]>([]);
-  const [loadMore, setLoadMore] = useState(
-    `https://pokeapi.co/api/v2/pokemon?limit=10`
-  );
-  const api = `https://pokeapi.co/api/v2/pokemon`
-
-  const getPokemons = async () => {
-    const res = await fetch(loadMore);
-    const data = await res.json();
-    setLoadMore(data.next);
-
-    function createPokeObj(result: any, limit: number = 10, offset: number = 0 ) {
-      result.forEach(async (pokemon: any) => {
-        const res = await fetch(
-          `${api}/${pokemon.name}?limit=${limit}&offset=${offset}`
-        );
-        const data = await res.json();
-        setPokemons((currentList) => [...currentList, data]);
-      });
-    }
-    createPokeObj(data.results);
-  };
+  const [actualPokemons, setActualPokemons] = useState<any[]>([]);
+  const [load, loadMore] = useState(0);
+  let page = 10;
 
   useEffect(() => {
-    getPokemons();
-  }, []);
+    const fetchData = async () => {
+      const names = await pokeName(page, load);
+      const pokemonsPromises = names.map(async (name: string) => {
+        return await getPokemons(name);
+      });
+      const pokemonsMore = await Promise.all(pokemonsPromises);
+      setPokemons([...pokemons, ...pokemonsMore]);
+      setActualPokemons([...pokemons, ...pokemonsMore]);
+    };
+    fetchData();
+  }, [load]);
+
+  async function handleMore() {
+    loadMore(load + page);
+  }
 
   return (
     <div style={{ paddingBottom: "2rem" }}>
       <C.Container>
-        {pokemons.map((pokemon, key) => {
+        {pokemons.map((pokemon, index) => {
           return (
             <PokeCard
               name={pokemon.name}
-              key={key}
-              image={pokemon.sprites.other.dream_world.front_default} />
+              image={pokemon.sprites.other.home.front_default}
+              key={index}
+              id={pokemon.id}
+            />
           );
         })}
       </C.Container>
-      <C.Button onClick={() => getPokemons()}>Buscar mais...</C.Button>
+      <C.Button onClick={handleMore}>Buscar mais...</C.Button>
     </div>
   );
 };
