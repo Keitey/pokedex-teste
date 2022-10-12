@@ -11,7 +11,6 @@ const Details = () => {
     async function fetchAbilities(data: any){
       const abilitiesData = await getAbilities(data.abilities)
       setAbilites(abilitiesData)
-      console.log(abilitiesData)
     }
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
       .then((res) => res.json())
