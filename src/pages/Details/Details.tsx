@@ -76,9 +76,7 @@ const Details = () => {
         </C.Description>
       </C.PokeDetails>
       <Link to="/">
-        <Button text={"Voltar"} onClick={function (): Promise<void> {
-          throw new Error("Function not implemented.");
-        } } />
+        <Button text={"Voltar"}/>
       </Link>
     </div>
   );

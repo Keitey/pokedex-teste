@@ -2,7 +2,6 @@ import * as C from "./styles";
 
 interface MyBtn {
   text: string;
-  onClick: () => Promise<void>
 }
 
 const Button = ({ text }: MyBtn) => {
