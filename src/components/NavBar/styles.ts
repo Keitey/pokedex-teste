@@ -12,17 +12,6 @@ export const NavContainer = styled.div`
     flex-direction: column;
   }
 
-  input {
-    width: 300px;
-    padding: 0.3rem;
-    border: none;
-    border-radius: 3px;
-
-    @media (max-width: 600px) {
-      width: 200px;
-    }
-  }
-
   img {
     width: 150px;
   }

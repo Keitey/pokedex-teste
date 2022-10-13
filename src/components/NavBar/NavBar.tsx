@@ -10,14 +10,7 @@ const NavBar = () => {
           alt="pokedex"
         />
       </Link>
-      <form action="">
-        <input
-          type="search"
-          name="navpoke"
-          id="navepoke"
-          placeholder="Buscar Pokémon..."
-        />
-      </form>
+    espaço do dark mode
     </C.NavContainer>
   );
 };

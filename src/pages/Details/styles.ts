@@ -5,7 +5,7 @@ export const PokeDetails = styled.div`
   justify-content: center;
   gap: 5rem;
   margin: 1rem;
-  padding: 2rem;
+  padding: 2rem 1rem 1rem;
 
   @media (max-width: 600px) {
     flex-direction: column;
@@ -28,7 +28,7 @@ export const Poke = styled.div`
   }
 
   img {
-    height: 550px;
+    height: 500px;
   }
 `;
 
