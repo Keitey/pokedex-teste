@@ -49,7 +49,7 @@ const Details = () => {
           <C.Title>Moves:</C.Title>
           <C.Content>
             {pokemon.moves.map((move, id) => {
-              return <li key={id}>⭐{move.move.name}</li>;
+              return <li key={id}>🥷{move.move.name}</li>;
             })}
           </C.Content>
 
