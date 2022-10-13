@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 export const PokeDetails = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: 5rem;
-  margin: 2rem;
+  margin: 1rem;
   padding: 2rem;
 
   @media (max-width: 600px) {
@@ -17,7 +16,6 @@ export const Poke = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
 
   h1 {
     color: #2c3f63;
@@ -28,7 +26,7 @@ export const Poke = styled.div`
   }
 
   img {
-    height: 450px;
+    height: 550px;
   }
 `;
 
@@ -65,4 +63,5 @@ export const Content = styled.div`
       text-align: justify;
     }
   }
+
 `;
