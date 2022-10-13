@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const PokeDetails = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 3rem;
   margin: 2rem;
   padding: 2rem;
