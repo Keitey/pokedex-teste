@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import PokeCard from "../../components/PokeCard/PokeCard";
 import { pokeName, getPokemons } from "../../services/api";
+
 import * as C from "./styles";
+import Button from '../../components/Button/Button'
 
 const Home = () => {
   const [pokemons, setPokemons] = useState<any[]>([]);

@@ -4,7 +4,7 @@ export const PokeDetails = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 5rem;
   margin: 2rem;
   padding: 2rem;
 
@@ -24,10 +24,11 @@ export const Poke = styled.div`
     font-weight: bold;
     font-size: 40px;
     text-decoration: shadow;
+    text-transform: uppercase;
   }
 
   img {
-    height: 350px;
+    height: 450px;
   }
 `;
 
@@ -49,5 +50,19 @@ export const Content = styled.div`
 
   li {
     list-style-type: none;
+    font-size: 20px;
+  }
+
+  .ability {
+    h4 {
+      text-transform: uppercase;
+      font-size: 20px;
+      padding: 0.6rem 0;
+    }
+
+    p {
+      width: 300px;
+      text-align: justify;
+    }
   }
 `;

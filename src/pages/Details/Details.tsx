@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, MouseEvent } from "react";
 import { useParams } from "react-router-dom";
 import { getAbilities } from "../../services/api";
+import { Link } from "react-router-dom";
 
 import * as C from "./styles";
+import Button from '../../components/Button/Button'
 
 const Details = () => {
   const { id }: any = useParams();
@@ -37,7 +39,7 @@ const Details = () => {
   }, [id]);
 
   return (
-    <>
+    <div style={{paddingBottom: '4rem'}}>
       <C.PokeDetails>
         <C.Poke>
           <h1>{pokemon.name}</h1>
@@ -53,11 +55,32 @@ const Details = () => {
 
           <C.Title>Abilities:</C.Title>
           <C.Content>
-            
+            {abilities.map((ability, id) => {
+              return (
+                <div key={id} className="ability">
+                  <h4>🧙‍♂️{ability.name}</h4>
+                  {ability.effect_entries.slice(1).map((description) => (
+                    <p key={id}>{description.effect}</p>
+                  ))}
+                </div>
+              );
+            })}
+          </C.Content>
+
+          <C.Title>Types:</C.Title>
+          <C.Content>
+            {pokemon.types.map((type, id) => {
+              return <li key={id}>🎯{type.type.name}</li>;
+            })}
           </C.Content>
         </C.Description>
       </C.PokeDetails>
-    </>
+      <Link to="/">
+        <Button text={"Voltar"} onClick={function (): Promise<void> {
+          throw new Error("Function not implemented.");
+        } } />
+      </Link>
+    </div>
   );
 };
 
