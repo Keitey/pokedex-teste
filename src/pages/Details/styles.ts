@@ -9,6 +9,8 @@ export const PokeDetails = styled.div`
 
   @media (max-width: 600px) {
     flex-direction: column;
+    padding: 1rem;
+    margin: .3rem;
   }
 `;
 
@@ -33,13 +35,17 @@ export const Poke = styled.div`
 export const Description = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 600px){
+    margin: auto;
+  }
 `;
 
 export const Title = styled.span`
-  font-size: 30px;
+  font-size: 25px;
   color: #2c3f63;
   font-weight: bold;
-  padding-bottom: 1rem;
+  padding-bottom: 0.2rem;
 `;
 
 export const Content = styled.div`
@@ -54,14 +60,19 @@ export const Content = styled.div`
   .ability {
     h4 {
       text-transform: uppercase;
-      font-size: 20px;
+      font-size: 18px;
       padding: 0.6rem 0;
     }
 
     p {
-      width: 300px;
+      width: 350px;
       text-align: justify;
+      font-size: 15px;
+      margin: auto;
+
+      @media (max-width: 600px) {
+        width: 250px;
+      }
     }
   }
-
 `;

@@ -4,7 +4,7 @@ import { getAbilities } from "../../services/api";
 import { Link } from "react-router-dom";
 
 import * as C from "./styles";
-import Button from '../../components/Button/Button'
+import Button from "../../components/Button/Button";
 
 const Details = () => {
   const { id }: any = useParams();
@@ -20,7 +20,6 @@ const Details = () => {
     async function fetchAbilities(data: any) {
       const abilitiesData = await getAbilities(data.abilities);
       setAbilites(abilitiesData);
-      console.log(abilitiesData);
     }
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
       .then((res) => res.json())
@@ -34,12 +33,11 @@ const Details = () => {
         };
         setPokemon(pokemon);
         fetchAbilities(data);
-        console.log(pokemon);
       });
   }, [id]);
 
   return (
-    <div style={{paddingBottom: '4rem'}}>
+    <div style={{ paddingBottom: "1.5rem" }}>
       <C.PokeDetails>
         <C.Poke>
           <h1>{pokemon.name}</h1>
@@ -76,7 +74,7 @@ const Details = () => {
         </C.Description>
       </C.PokeDetails>
       <Link to="/">
-        <Button text={"Voltar"}/>
+        <Button text={"Voltar"} />
       </Link>
     </div>
   );
