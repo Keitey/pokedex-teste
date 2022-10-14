@@ -20,7 +20,7 @@ export const Poke = styled.div`
   align-items: center;
 
   h1 {
-    color: #2c3f63;
+    color: ${props => props.theme.colors.textPrincipalPageDetails};
     font-weight: bold;
     font-size: 40px;
     text-decoration: shadow;
@@ -43,7 +43,7 @@ export const Description = styled.div`
 
 export const Title = styled.span`
   font-size: 25px;
-  color: #2c3f63;
+  color: ${props => props.theme.colors.textPrincipalPageDetails};
   font-weight: bold;
   padding-bottom: 0.2rem;
 `;
@@ -55,6 +55,7 @@ export const Content = styled.div`
   li {
     list-style-type: none;
     font-size: 20px;
+    color: ${props => props.theme.colors.textPageDetails};
   }
 
   .ability {
@@ -62,6 +63,7 @@ export const Content = styled.div`
       text-transform: uppercase;
       font-size: 18px;
       padding: 0.6rem 0;
+      color: ${props => props.theme.colors.texth4PageDetails};
     }
 
     p {
@@ -69,6 +71,7 @@ export const Content = styled.div`
       text-align: justify;
       font-size: 15px;
       margin: auto;
+      color: ${props => props.theme.colors.textPageDetails};
 
       @media (max-width: 600px) {
         width: 250px;

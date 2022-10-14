@@ -17,8 +17,8 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <>
         <NavBar toggleTheme={toggleTheme} />
-        <GlobalStyle />
         <RoutesApp />
+        <GlobalStyle />
       </>
     </ThemeProvider>
   );

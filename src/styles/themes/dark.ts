@@ -6,6 +6,9 @@ export default {
     secondary: "#ef5350",
 
     textPokeCard: "#dc2626",
+    textPrincipalPageDetails: '#FECA1B',
+    textPageDetails: '#fff',
+    texth4PageDetails: '#cfbf8c',
     background: "#313131",
     backgroundCardPoke: "#fca5a5",
 
