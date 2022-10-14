@@ -26,6 +26,7 @@ Teste técnico do curso Dev em Dobro onde o objetivo era:
  * botão de rolagem para o topo da tela;
  * react-switch;
  * os temas de dark e light mode ficam salvos no localStorage assim se o usuário der reload o tema escolhido será mantido;
+ * page 404 Not Found;
  
  # Veja o projeto completo:
  https://pokeapi-typescript.netlify.app/
