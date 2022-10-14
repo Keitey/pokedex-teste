@@ -7,11 +7,7 @@ export const NavContainer = styled.div`
   width: 100%;
   background: ${props => props.theme.colors.primary};
   padding: 0.8rem;
-
-  @media (max-width: 600px) {
-    flex-direction: column;
-  }
-
+  
   img {
     width: 150px;
   }
