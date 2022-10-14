@@ -6,6 +6,7 @@ import light from "./styles/themes/light";
 import dark from "./styles/themes/dark";
 import NavBar from "./components/NavBar/NavBar";
 import usePersistentState from "./utils/usePersistedState";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const App = () => {
   const [theme, setTheme] = usePersistentState<DefaultTheme>("theme", light);
@@ -18,6 +19,7 @@ const App = () => {
       <>
         <NavBar toggleTheme={toggleTheme} />
         <RoutesApp />
+        <ScrollToTop />
         <GlobalStyle />
       </>
     </ThemeProvider>
