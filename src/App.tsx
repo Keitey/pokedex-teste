@@ -4,7 +4,7 @@ import GlobalStyle from "./styles/global";
 import { ThemeProvider, DefaultTheme } from "styled-components";
 import light from "./styles/themes/light";
 import dark from "./styles/themes/dark";
-import NavBar from "./components/NavBar/NavBar";
+import Header from "./components/Header/Header";
 import usePersistentState from "./utils/usePersistedState";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
@@ -17,7 +17,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <NavBar toggleTheme={toggleTheme} />
+        <Header toggleTheme={toggleTheme} />
         <RoutesApp />
         <ScrollToTop />
         <GlobalStyle />
