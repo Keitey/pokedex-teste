@@ -13,6 +13,7 @@ declare module "styled-components" {
       textPokeCard: string;
       textPrincipalPageDetails: string;
       textPageDetails: string;
+      textNotFound: string;
       texth4PageDetails: string;
       background: string;
       backgroundCardPoke: string;

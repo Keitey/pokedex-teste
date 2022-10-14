@@ -10,10 +10,12 @@ export const Error = styled.div`
 
   h1 {
     font-size: 90px;
+    color: ${props => props.theme.colors.textNotFound};
   }
 
   h3 {
     font-size: 31px;
+    color: ${props => props.theme.colors.textNotFound};
     @media (max-width: 600px) {
       font-size: 21px;
     }
