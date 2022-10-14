@@ -23,10 +23,10 @@ export const CardText = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background: #3761A8;
+  background: ${props => props.theme.colors.backgroundCardPoke};
   border-radius: 0px 0px 3px 3px;
   padding: 0.3rem;
-  color: #ffff;
+  color: ${props => props.theme.colors.textPokeCard};
   font-size: 18px;
   font-weight: bold;
 `;

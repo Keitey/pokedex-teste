@@ -1,7 +1,16 @@
 import * as C from "./styles";
 import { Link } from "react-router-dom";
+import Switch from "react-switch";
+import { ThemeContext } from "styled-components";
+import { useContext } from "react";
 
-const NavBar = () => {
+interface Props{
+  toggleTheme(): void;
+}
+
+const NavBar= ({toggleTheme}) => {
+  const { colors, title } = useContext(ThemeContext);
+
   return (
     <C.NavContainer>
       <Link to="/">
@@ -10,7 +19,14 @@ const NavBar = () => {
           alt="pokedex"
         />
       </Link>
-    espaço do dark mode
+      <Switch
+        onChange={toggleTheme}
+        checked={title === 'dark'}
+        onColor={colors.switchOn}
+        offColor= {colors.switchOff}
+        checkedIcon={false}
+        uncheckedIcon={false}
+      />
     </C.NavContainer>
   );
 };
