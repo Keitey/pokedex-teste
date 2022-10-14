@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { ThemeProvider } from "styled-components";
 import App from "./App";
 
 const root = ReactDOM.createRoot(

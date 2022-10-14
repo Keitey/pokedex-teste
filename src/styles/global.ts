@@ -22,7 +22,7 @@ html, body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background: ${props => props.theme.colors.backgroundbody};
+  background: ${props => props.theme.colors.background};
 }
 
 img, picture, video, canvas, svg {

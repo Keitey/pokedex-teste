@@ -11,7 +11,7 @@ declare module "styled-components" {
       switchOff: string;
 
       textPokeCard: string;
-      backgroundbody: string;
+      background: string;
       backgroundCardPoke: string;
     };
   }

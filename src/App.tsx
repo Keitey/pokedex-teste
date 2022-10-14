@@ -4,6 +4,7 @@ import GlobalStyle from "./styles/global";
 import { ThemeProvider } from "styled-components";
 import light from "./styles/themes/light";
 import dark from "./styles/themes/dark";
+import NavBar from "./components/NavBar/NavBar";
 
 const App = () => {
   const [theme, setTheme] = useState(light);
@@ -14,8 +15,9 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <div>
-        <RoutesApp />
+        <NavBar toggleTheme={toggleTheme} />
         <GlobalStyle />
+        <RoutesApp />
       </div>
     </ThemeProvider>
   );

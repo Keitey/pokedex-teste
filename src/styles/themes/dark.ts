@@ -6,7 +6,7 @@ export default {
     secondary: "#111827",
 
     textPokeCard: "#dc2626",
-    backgroundbody: "#222",
+    background: "#222",
     backgroundCardPoke: "#fca5a5",
 
     switchOn: "#3761A8",
