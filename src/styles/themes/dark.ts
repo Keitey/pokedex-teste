@@ -2,14 +2,15 @@ export default {
   title: "dark",
 
   colors: {
-    primary: "#ef5350",
-    secondary: "#111827",
+    primary: "#171717",
+    secondary: "#ef5350",
 
     textPokeCard: "#dc2626",
-    background: "#222",
+    background: "#313131",
     backgroundCardPoke: "#fca5a5",
 
-    switchOn: "#3761A8",
-    switchOff: "#b3aeae",
+    switchOn: "#b3aeae",
+    switchOff: "#3761A8",
+    backgroundCard: '#78716c',
   },
 };

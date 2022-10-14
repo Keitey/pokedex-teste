@@ -13,6 +13,7 @@ declare module "styled-components" {
       textPokeCard: string;
       background: string;
       backgroundCardPoke: string;
+      backgroundCard: string;
     };
   }
 }

@@ -7,6 +7,7 @@ export const Card = styled.div`
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 3px;
   transition: .4s;
+  background: ${props=> props.theme.colors.backgroundCard};
 
   &:hover{
     transform: scale(1.1)
